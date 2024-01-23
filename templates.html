@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("./Images/BG2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: rgba(106,118,118,255);
+        }
+        header {
+            position: fixed;
+            z-index: 999;
+            top: 0px;
+            width: 100%;
+            backdrop-filter: blur(50px);
+            padding: 6.4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            box-shadow: 5px 5px 2px rgba(70, 70, 70, 0.783);
+            margin-left: 15px;
+            border-style: solid;
+            border-color: white;
+            border-width: 1px;
+            border-radius: 6px;
+            max-width: 100%;
+            height: 41px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 50px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: rgb(71, 31, 127);
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        nav a:hover{
+            font-size: 21px;
+        }
+        #head{
+            padding-top: 27px;
+            margin: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 50px;
+            color: rgb(60, 24, 110);
+        }
+        #subhead{
+            margin: 10px;
+            font-family: serif;
+            font-size: 25px;
+            border-bottom-style: solid;
+            border-width: 1.5px;
+            border-color: rgb(103, 103, 103);
+            width: 800px;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+        .tempsec{
+            margin: 20px auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 27px;
+        }
+        .text{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .rowone{
+            margin-bottom: 30px;
+        }
+        .align{
+            margin: 30px;
+            display: inline;
+            bottom: 30px;
+        }
+        .rowtwo{
+            margin-bottom: 80px;
+        }
+        .rowthree{
+            margin-bottom: 30px;
+        }
+        .rowfour{
+            margin-bottom: 80px;
+        }
+        .center{
+            margin: auto;
+        }
+        .temp{
+            filter: blur(0.3px);
+            border-radius: 12px;
+            border-style: initial;
+            border-color: skyblue;
+            border-width: 4px;
+            box-shadow: 7px 7px 5px rgba(57, 63, 65, 0.571);
+        }
+        #one:hover{
+            height: 335px;
+            width: 250px;
+            filter: blur(0px);
+            border-radius: 0px;
+            transition: 0.4s;
+        }
+        #two:hover{
+            height: 335px;
+            width: 250px;
+            filter: blur(0px);
+            border-radius: 0px;
+            transition: 0.4s;
+        }
+        #three:hover{
+            height: 335px;
+            width: 250px;
+            filter: blur(0px);
+            border-radius: 0px;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="aboutUS.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="text">
+        <p id="head"><B>Templates</B></p>
+        <p id="subhead">Choose your favourite Template</p>
+        <p class="tempsec"><b>---------------Recommended Templates---------------</b></p>
+    <table class="rowone">
+        <ul>
+            <li class="align"><a href="form_one.html"><img class="temp" id="one" src="./Images/template1.JPG" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_two.html"><img class="temp" id="two" src="./Images/template2.JPEG" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_three.html"><img class="temp" id="three" src="./Images/template3.JPG" height="330px" width="247px"></a></li>
+        </ul>
+    </table>
+    <table class="rowtwo">
+        <ul>
+            <li class="align"><a href="form_four.html"><img class="temp" id="one" src="./Images/template4.JPG" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_five.html"><img class="temp" id="two" src="./Images/template5.JPG" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_six.html"><img class="temp" id="three" src="./Images/template6.JPG" height="330px" width="247px"></a></li>
+        </ul>
+    </table>
+    <p class="tempsec"><b>---------------More Templates---------------</b></p>
+    <table class="rowthree">
+        <ul>
+            <li class="align"><a href="form_seven.html"><img class="temp" id="one" src="./Images/template7.jpg" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_eight.html"><img class="temp" id="two" src="./Images/template8.jpg" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_nine.html"><img class="temp" id="three" src="./Images/template9.jpg" height="330px" width="247px"></a></li>
+        </ul>
+    </table>
+    <table class="rowfour">
+        <ul>
+            <li class="align"><a href="form_ten.html"><img class="temp" id="one" src="./Images/template10.jpg" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_eleven.html"><img class="temp" id="two" src="./Images/template11.jpg" height="330px" width="247px"></a></li>
+            <li class="align"><a href="form_twelve.html"><img class="temp" id="three" src="./Images/template12.jpg" height="330px" width="247px"></a></li>
+        </ul>
+    </table>
+    </div>
+</body>
+</html>
