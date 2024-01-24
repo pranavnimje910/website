@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
             padding: 0px;
@@ -97,6 +98,21 @@
             background-color: rgb(71, 31, 127);
             border-radius: 5px;
         }
+        .menu{
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            background-color: transparent;
+            border: 1px solid  rgba(71, 31, 127, 0.32);
+            color:  rgb(71, 31, 127);
+            box-shadow: 2px 1px 3px rgba(12, 12, 12, 0.54);
+            border-radius: 5px;
+            display: none;
+        }
+        .menu-color{
+            background-color: #8148fd;
+            color: #fff;
+        }
         .box{
             width: 800px;
             height: fit-content;
@@ -174,14 +190,50 @@
             border-radius: 6px;
             margin: 7px;
         }
-
+        /* #com{
+            width: 100%;
+           
+        }
         #com h2{
             text-align: center;
             padding-top: 45px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: rgb(54, 21, 100);
+        } */
+
+        .slider-container{
+            width: 90%;
+            height: fit-content;
+            padding: 15px;
+            margin-top: 50px;
+            margin-inline: auto;
+            border-radius: 20px;    
+            box-shadow: 5px 5px 10px rgba(12, 12, 12, 0.54);
+            border-color: rgba(255, 255, 255, 0.212);
         }
-        .logos{
+        .slider-container h2{
+            padding: 10px 20px;
+            color: rgb(54, 21, 100);
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        marquee{
+           /* background-color: antiquewhite; */
+           margin-top: 15px;
+           padding: 20px;
+           border-radius: 15px;
+           border-right: 3px solid rgba(255, 255, 255, 0.212);
+           border-left: 3px solid rgba(255, 255, 255, 0.212);
+        }
+        marquee img{
+            width: 110px;
+            height: 30px;
+            margin-right: 40px;          
+        }
+        marquee img:last-child{
+            height: 50px;
+        }
+        /* .logos{
             width: 900px;
             margin: auto;
             overflow: hidden;
@@ -191,7 +243,11 @@
             border-left-style: solid;
             border-color: rgba(255, 255, 255, 0.212);
         }
-        .logos-slider{
+        .logos-slider img{
+            height: 30px;
+            margin: 0 50px;
+        } */
+        /* .logos-slider{
             display: inline-block;
             animation: 30s slide infinite linear;
         }
@@ -206,11 +262,11 @@
             to {
                 transform: translateX(-100%);
             }
-        }
-        #space{
+        } */
+        /* #space{
             min-height: 40px;
             max-height: 40px;
-        }
+        } */
 
         #userguide{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -257,6 +313,47 @@
             width: 90%;
             text-align: justify;
         }
+        .menu{
+            display: block;
+        }
+        nav{
+            display: none;
+            background-color: #6DB5B2;
+            width: 250px;
+            height: 500px;
+            border: 1px solid rgba(153, 152, 152, 0.564);
+            box-shadow: -5px 5px 10px rgba(12, 12, 12, 0.54);
+            border-radius: 15px;
+            position: absolute;
+            top: 70px;
+            right: 10px;
+        }
+        .links-list{
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+        .links-list li{
+            width: 80%;
+            margin-inline: auto;
+            background-color: #79ACA4;
+           
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .links-list li:hover{
+           background-color: #7f8e8b;
+           color: #fff;
+        }
+        .links-list li a{
+            color: black;
+        }
+        .show{
+            display: block;
+        }
         }
         @media screen and (max-width: 500px){
             nav ul{
@@ -272,12 +369,18 @@
         #increase{
             font-size: 16px;
         }
+        .slider-container h2{
+            font-size: 20px;
+            font-weight: 800;
+            padding: 10px 0px;
+        }
         }
 
     </style>
 </head>
-<div class="root">
+
 <body>
+    <div class="root">
     <div class="header">
         <div class="logo">
             <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
@@ -290,6 +393,7 @@
                 <li><a href="aboutUS.html">About Us</a></li>
             </ul>
         </nav>
+       <button class='bx bx-menu menu '></button>
     </div>
     <div class="box">
         <h4 id="welcome" class="anim">WELCOME TO WEB 05 RESUME BUILDER</h4>
@@ -298,15 +402,51 @@
         <p id="increase" class="anim">Increase your chances of shortlisting your Resume by 33%</p>      
         <a id="button" href="templates.html" class="anim">GET STARTED</a>
     </div>
-<<<<<<< HEAD
 
-=======
-    <div class="anim" id="com">
+    <!-- ----ImageSlider----- -->
+
+        <div class="slider-container">
+            <h2>Some famous companies that shortlisted our resumes</h2>
+           
+                <marquee behavior="" direction="">
+                
+                    <img src="https://www.freepnglogos.com/uploads/google-logo-png/file-google-logo-svg-wikimedia-commons-23.png" />
+                        
+                    <img src="https://companieslogo.com/img/orig/ACN_BIG-3a6289fb.png?t=1633439499" />
+                
+                    <img src="https://companieslogo.com/img/orig/AMZN_BIG-accd00da.png?t=1632523695" />
+            
+                    <img src="https://companieslogo.com/img/orig/META_BIG-e5411269.png?t=1654568366" />
+                            
+                    <img src="https://companieslogo.com/img/orig/MSFT_BIG-24b887c2.png?t=1633073277" />
+                    <img src="https://companieslogo.com/img/orig/CTSH_BIG-953fa309.png?t=1652276339" />
+                    <img src="https://companieslogo.com/img/orig/WMT_BIG-4dae0070.png?t=1633217525" />
+                    <img src="https://companieslogo.com/img/orig/MMYT_BIG-7271499a.png?t=1683788455" />
+                    <img src="https://companieslogo.com/img/orig/TCS.NS_BIG-89c50e39.png?t=1631949260" />
+    
+                    <img src="https://companieslogo.com/img/orig/deloitte_BIG-86032e42.png?t=1699425248" />
+                    <img src="https://companieslogo.com/img/orig/ZOMATO.NS_BIG-aa3dfaff.png?t=1660019461" />
+                  
+                    <img src="  https://companieslogo.com/img/orig/INFY_BIG-9635f314.png?t=1682136428" />           
+
+                    <img src="https://companieslogo.com/img/orig/HCLTECH.NS-a301c3b4.png?t=1596030335" />
+                    <img src="https://companieslogo.com/img/orig/PAYTM.NS_BIG-463f18d2.png?t=1636379788" />
+                    <img src="https://companieslogo.com/img/orig/TECHM.NS_BIG-281ab5b9.png?t=1601652359" />
+                    <img src="https://companieslogo.com/img/orig/IBM-57502b16.png?t=1669436923" />
+                    <img src="https://companieslogo.com/img/orig/PEP_BIG-f38ffafd.png?t=1633439508" />
+                    <img src="https://companieslogo.com/img/orig/WIT_BIG-0de2dc21.png?t=1648406781" />
+           
+                </marquee>
+        </div>
+
+
+
+    <!-- <div class="anim" id="com">
         <h2><b>Some famous companies that shortlisted our resumes</b></h2>
             <div class="logos">
                 <div class="logos-slider">
                 
-                    <!-- Img Code -->
+                    
                         <img src="./Images/comgoogle.png" />
                     
                         <img src="./Images/comaccenture.png" />
@@ -323,7 +463,7 @@
                 </div>
                 <div class="logos-slider">
                 
-                    <!-- Img Code -->
+                   
                         <img src="./Images/comgoogle.png" />
                     
                         <img src="./Images/comaccenture.png" />
@@ -339,9 +479,10 @@
                         <img src="./Images/cominfotrixs.PNG" />
                 </div>
             </div>
-    </div>
+    </div> -->
+
     <div id="space"></div>
->>>>>>> 0b90b323af75b8df20104ad0a274302ff7275073
+
     <div class="anim" id="guide">
         <h2 class="anim" id="userguide"><b>User Guide</b></h2>
         <br>
@@ -367,5 +508,14 @@
         </div>
     </div>
 </div>
+<script>
+    const menu = document.querySelector(".menu");
+    const nav =document.querySelector("nav");
+    menu.addEventListener("click", ()=>{
+       
+       nav.classList.toggle("show");
+       menu.classList.toggle("menu-color")
+    })
+</script>
 </body>
 </html>
