@@ -1,0 +1,31 @@
+
+/* media query for all templates */
+
+@media screen and (max-width: 1200px){
+  .container{
+    width: 100%;
+    height: fit-content !important;
+    margin-top: 30px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    
+   
+  }
+  .left{
+   width: 95%;
+   max-width: 800px;
+   max-height: 700px !important;
+   min-height: 700px !important;
+  margin-inline: auto;
+  }
+  .right{
+    width: 95%;
+    max-width: 800px;
+    max-height: 700px !important;
+    min-height: 700px !important;
+   margin-inline: auto;
+   }
+}

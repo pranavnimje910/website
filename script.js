@@ -48,7 +48,7 @@ function addMoreInfo(event, value){
    <div class="edu-row">
    <input type="text"  class="university" placeholder="Institute/University">
    <input type="text" class="degree" placeholder="Degree/Certificate">
-   <input type="number" class="percentage" placeholder="Percentage/CGPA">
+   <input type="number" class="percentage" placeholder="Percentage">
    <input type="text" class="year" placeholder="Year">
    <span class='bx bx-trash'></span>
    </div>`
