@@ -10,6 +10,9 @@
             margin: 0px;
             box-sizing: border-box;
         }
+        html{
+            scroll-behavior: smooth;
+        }
         body{
            
             background-image: url("./Images/BG.jpg");
@@ -114,7 +117,7 @@
             background-color: rgba(213, 209, 223, 0.128);
             text-align: center;
             margin: auto;
-            margin-top: 70px;
+            margin-top: 20px;
             margin-bottom: 50px;
             padding: 30px 20px;
             width: 700px;
@@ -160,6 +163,7 @@
             border-color: rgb(71, 31, 127);
             transition: 0.5s;
             animation-delay: 2s;
+            margin-bottom: 20px;
         }
         #button:hover{
             border-radius: 20px;
@@ -170,6 +174,44 @@
             border-radius: 6px;
             margin: 7px;
         }
+
+        #com h2{
+            text-align: center;
+            padding-top: 45px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(54, 21, 100);
+        }
+        .logos{
+            width: 900px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0px;
+            white-space: nowrap;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-color: rgba(255, 255, 255, 0.212);
+        }
+        .logos-slider{
+            display: inline-block;
+            animation: 30s slide infinite linear;
+        }
+        .logos-slider img{
+            height: 30px;
+            margin: 0 50px;
+        }
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        #space{
+            min-height: 40px;
+            max-height: 40px;
+        }
+
         #userguide{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(81, 37, 142);
@@ -243,6 +285,7 @@
         <nav>
             <ul class="links-list">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="#space">User Guide</a></li>
                 <li><a href="templates.html">Templates</a></li>
                 <li><a href="aboutUS.html">About Us</a></li>
             </ul>
@@ -255,7 +298,50 @@
         <p id="increase" class="anim">Increase your chances of shortlisting your Resume by 33%</p>      
         <a id="button" href="templates.html" class="anim">GET STARTED</a>
     </div>
+<<<<<<< HEAD
 
+=======
+    <div class="anim" id="com">
+        <h2><b>Some famous companies that shortlisted our resumes</b></h2>
+            <div class="logos">
+                <div class="logos-slider">
+                
+                    <!-- Img Code -->
+                        <img src="./Images/comgoogle.png" />
+                    
+                        <img src="./Images/comaccenture.png" />
+                    
+                        <img src="./Images/comamazon.png" />
+                
+                        <img src="./Images/comfaceboor.png" />
+                    
+                        <img src="./Images/commicrosoft.png" />
+                    
+                        <img src="./Images/comtcs.png" />
+
+                        <img src="./Images/cominfotrixs.PNG" />
+                </div>
+                <div class="logos-slider">
+                
+                    <!-- Img Code -->
+                        <img src="./Images/comgoogle.png" />
+                    
+                        <img src="./Images/comaccenture.png" />
+                    
+                        <img src="./Images/comamazon.png" />
+                
+                        <img src="./Images/comfaceboor.png" />
+                    
+                        <img src="./Images/commicrosoft.png" />
+                    
+                        <img src="./Images/comtcs.png" />
+
+                        <img src="./Images/cominfotrixs.PNG" />
+                </div>
+            </div>
+    </div>
+    <div id="space"></div>
+>>>>>>> 0b90b323af75b8df20104ad0a274302ff7275073
     <div class="anim" id="guide">
         <h2 class="anim" id="userguide"><b>User Guide</b></h2>
         <br>
