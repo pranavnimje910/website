@@ -11,22 +11,38 @@
             box-sizing: border-box;
         }
         body{
+           
             background-image: url("./Images/BG.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-color: rgba(106,118,118,255);
+             background-color: rgba(106,118,118,255); 
+            
+          
+        }
+        .root{
+            width: 100%;
+            height: fit-content;
+            padding-top: 50px;
+            margin-top: 100px; 
+            
         }
         .header {
-            z-index: 999;
-            top: 0px;
+           
             width: 100%;
-            backdrop-filter: blur(50px);
-            padding: 6.4px;
+            /* backdrop-filter: blur(50px); */
+           padding: 10px 20px;
+            padding-right: 50px;
             display: flex;
             position: fixed;
+            z-index: 100;
+            top: 0px;
+            left: 0px;
             justify-content: space-between;
             align-items: center;
+            background-color: #68aba7;
+            border-bottom:1px solid #76777759;
+            
         }
 
         .logo img {
@@ -43,12 +59,15 @@
         nav ul {
             list-style: none;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
         
-        nav ul li {
+        /* nav ul li {
             margin-left: 10px;
             margin-right: 50px;
-        }
+        } */
         
         nav a {
             text-decoration: none;
@@ -56,20 +75,32 @@
             font-weight: bold;
             font-size: 20px;
             transition: 0.5s;
+            position: relative;
         }
-        nav a:hover{
+        /* nav a:hover{
             font-size: 21px;
+        } */
+        .links-list li a::after{
+            content: '';
+            width: 0px;
+            height: 3px;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+            transition: width 0.5s linear;
+        }
+        .links-list li a:hover::after{
+            width: 100%;
+            background-color: rgb(71, 31, 127);
+            border-radius: 5px;
         }
         .box{
+            width: 800px;
+            height: fit-content;
             backdrop-filter: blur(5px);
             background-color: rgba(213, 209, 223, 0.128);
             text-align: center;
             margin: auto;
-            margin-top: 150px;
-            min-width: 800px;
-            max-width: 800px;
-            max-height: 320px;
-            min-height: 320px;
             border-style: solid;
             border-width: 0.5px;
             border-radius: 12px;
@@ -85,17 +116,16 @@
             margin: auto;
             margin-top: 70px;
             margin-bottom: 50px;
-            min-width: 800px;
-            max-width: 800px;
+            padding: 30px 20px;
+            width: 700px;
+            height: fit-content;
+            /* min-width: 800px;
+            max-width: 800px; */
             border-style: solid;
             border-width: 0.5px;
             border-radius: 12px;
             box-shadow: 10px 10px 5px rgba(57, 63, 65, 0.571);
             border-color: rgba(139, 136, 146, 0.737);
-            padding-bottom: 40px;
-            padding-top: 20px;
-            padding-left: 50px;
-            padding-right: 50px;
             animation-delay: 2s;
         }
         #welcome{
@@ -107,12 +137,12 @@
         #create{
             margin: 20px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: xx-large;
+            font-size: 35px;
             animation-delay: 1s;
         }
         #increase{
             margin: 20px;
-            font-size: x-large;
+            font-size: 20px;
             animation-delay: 1.5s;
         }
         #button{
@@ -143,6 +173,7 @@
         #userguide{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(81, 37, 142);
+            text-align: center;
             font-size: 30px;
             animation-delay: 2s;
         }
@@ -158,6 +189,9 @@
             font-size: 20px;
             animation-delay: 3s;
         }
+        #steps p{
+            text-align: justify;
+        }
         .anim{
             opacity: 0;
             transform: translateY(30px);
@@ -169,16 +203,45 @@
                 transform: translateY(0px);
             }
         }
+        @media screen and (max-width: 900px) {
+            .box{
+                width: 90%;
+            }
+            #create{
+            font-size: 30px;
+            text-align: center;
+        }
+        #guide{
+            width: 90%;
+            text-align: justify;
+        }
+        }
+        @media screen and (max-width: 500px){
+            nav ul{
+                gap: 10px;
+            }
+            .header {
+                padding-right: 20px;
+            }
+            #create{
+            font-size: 20px;
+            text-align: center;
+        }
+        #increase{
+            font-size: 16px;
+        }
+        }
 
     </style>
 </head>
+<div class="root">
 <body>
     <div class="header">
         <div class="logo">
             <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
         </div>
         <nav>
-            <ul>
+            <ul class="links-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="templates.html">Templates</a></li>
                 <li><a href="aboutUS.html">About Us</a></li>
@@ -187,13 +250,12 @@
     </div>
     <div class="box">
         <h4 id="welcome" class="anim">WELCOME TO WEB 05 RESUME BUILDER</h4>
-        <pre id="create" class="anim"><b>Create your own personalized Resume
-    using different templates.
-</b></pre>
-        <pre id="increase" class="anim">Increase your chances of shortlisting your Resume by 33%
-        </pre>
+        <h1 id="create" class="anim">Create your own personalized Resume
+            using different templates.</h1>
+        <p id="increase" class="anim">Increase your chances of shortlisting your Resume by 33%</p>      
         <a id="button" href="templates.html" class="anim">GET STARTED</a>
     </div>
+
     <div class="anim" id="guide">
         <h2 class="anim" id="userguide"><b>User Guide</b></h2>
         <br>
@@ -218,5 +280,6 @@
             <p>Your resume is Generated on your right side along with your details that you have filled in form. Click on "Download" button and your resume will be downloaded in PDF format.</p>
         </div>
     </div>
+</div>
 </body>
 </html>
