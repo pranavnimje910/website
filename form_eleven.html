@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template 7</title>
+  <title>Template 11</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
@@ -19,15 +20,17 @@
     body{
       background-image: url("./Images/BG2.png");
       background-repeat: no-repeat;
+      background-attachment: fixed;
       background-size: cover;
     }
     header {
       position: fixed;
       top: 0px;
       width: 100%;
-      backdrop-filter: blur(7px);
       padding: 6.4px;
       display: flex;
+      background-color: rgba(99,171,168,255);
+      z-index: 100;
       justify-content: space-between;
       align-items: center;
     }
@@ -496,7 +499,7 @@
   <div class="container">
     <!-- left-side -->
 
-    <div class="left bx-scroll">
+    <div class="left bx-scroll" data-aos="fade-up" data-aos-duration="700">
       <h2 class="heading">Resume Generator</h2>
       <hr>
       <form action="" class="form">
@@ -607,7 +610,7 @@
 
     <!-- right-side -->
   
-    <div class="right  bx-scroll">
+    <div class="right  bx-scroll" data-aos="fade-up" data-aos-duration="700">
     <div class="resume-page">
       
      <div class="profile-view">
@@ -938,6 +941,10 @@
 //   };
 //  html2pdf().from(resume).set(opt).save();
 // }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </body>
 </html>
