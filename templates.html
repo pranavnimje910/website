@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Templates</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
@@ -22,7 +23,7 @@
        header {
            
             width: 100%;
-            /* backdrop-filter: blur(50px); */
+            backdrop-filter: blur(50px);
            padding: 10px 20px;
             padding-right: 50px;
             display: flex;
@@ -32,8 +33,6 @@
             left: 0px;
             justify-content: space-between;
             align-items: center;
-            background-color: #68aba7;
-            border-bottom:1px solid #76777759;
             
         }
        
@@ -89,9 +88,7 @@
             height: 40px;
             font-size: 30px;
             background-color: transparent;
-            border: 1px solid  rgba(71, 31, 127, 0.32);
             color:  rgb(71, 31, 127);
-            box-shadow: 2px 1px 3px rgba(12, 12, 12, 0.54);
             border-radius: 5px;
             display: none;
         }
@@ -100,8 +97,8 @@
             color: #fff;
         }
         #head{
-            padding-top: 27px;
-            margin: 20px;
+            padding-top: 17px;
+            margin: 20px auto;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 50px;
             color: rgb(60, 24, 110);
@@ -115,18 +112,40 @@
             font-family: sans-serif;
         }
         #subhead{
-            width: 100%;
+            width: 80%;
             margin-top: 10px;
+            margin: auto;
             text-align: center;
             font-family: serif;
             font-size: 25px;                           
             padding-bottom: 20px;
         }
+        #mainline{
+            transition: 0.5s;
+        }
+        #subline{
+            animation-delay: 0.5s;
+            transition: 0.5s;
+        }
+        .anim{
+            opacity: 0;
+            transform: translateY(30px);
+            animation: moveup 0.5s linear forwards;
+        }
+        @keyframes moveup{
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
         .tempsec{
-            width: 100%;
-           padding-block: 10px;
+            width: 80%;
+            margin: auto;
+            padding-block: 10px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 27px;
+            border-top-style: solid;
+            border-color: rgb(60, 24, 110);
             font-weight: 700;
             font-style: italic;
         }
@@ -227,12 +246,12 @@
         }
         nav{
             display: none;
-            background-color: #6DB5B2;
-            width: 250px;
-            height: 500px;
-            border: 1px solid rgba(153, 152, 152, 0.564);
-            box-shadow: -5px 5px 10px rgba(12, 12, 12, 0.54);
-            border-radius: 15px;
+            width: 200px;
+            height: 300px;
+            background-color: rgba(72, 72, 72, 0.726);
+            border-right: 4px solid rgb(81, 37, 142);
+            border-left: 4px solid rgb(81, 37, 142);
+            border-radius: 30px;
             position: absolute;
             top: 70px;
             right: 10px;
@@ -240,6 +259,7 @@
         .links-list{
             width: 100%;
             height: 100%;
+
             padding-top: 30px;
             flex-direction: column;
             justify-content: start;
@@ -248,17 +268,17 @@
         .links-list li{
             width: 80%;
             margin-inline: auto;
-            background-color: #79ACA4;
-           
+            background-color: rgb(71, 31, 127);
             padding: 10px 20px;
-            border-radius: 10px;
+            border-radius: 40px;
         }
         .links-list li:hover{
            background-color: #7f8e8b;
            color: #fff;
         }
         .links-list li a{
-            color: black;
+            font-size: 15px;
+            color: rgb(255, 254, 254);
         }
         .show{
             display: block;
@@ -299,84 +319,82 @@
         <button class='bx bx-menu menu '></button>
     </header>
     <div class="text">
+        <div id="mainline" class="anim">
         <p id="head"><B>Templates</B></p>
         <p id="subhead">Choose your favourite Template</p>
-
-        <hr>
+        </div>
+        <div id="subline" class="anim">
         <p class="tempsec">Recommended Templates</p>
-        <hr>
-
+        </div>
 
         <div class="template-container">
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_one.html">
                     <img src="Images/template1.JPG" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_two.html">
                     <img src="Images/template2.JPEG" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_three.html">
                     <img src="Images/template3.JPG" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_four.html">
                     <img src="Images/template4.JPG" alt="">
                 </a>
             </div>
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_five.html">
                     <img src="Images/template5.JPG" alt="">
                 </a>
             </div>
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_six.html">
                     <img src="Images/template6.JPG" alt="">
                 </a>
             </div>
         </div>
-
-        <hr>
+        <div data-aos="fade-up">
         <p class="tempsec">More Templates</p>
-        <hr>
-
+        </div>
         <div class="template-container">
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_seven.html">
                     <img src="Images/template7.jpg" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_eight.html">
                     <img src="Images/template8.jpg" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_nine.html">
                     <img src="Images/template9.jpg" alt="">
                 </a>
             </div>
 
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_ten.html">
                     <img src="Images/template10.jpg" alt="">
                 </a>
             </div>
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_eleven.html">
                     <img src="Images/template11.jpg" alt="">
                 </a>
             </div>
-            <div class="template-bx">
+            <div class="template-bx" data-aos="fade-up" data-aos-duration="500">
                 <a href="form_twelve.html">
                     <img src="Images/template12.jpg" alt="">
                 </a>
@@ -431,6 +449,10 @@
            nav.classList.toggle("show");
            menu.classList.toggle("menu-color")
         })
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
         </script>
 </body>
 </html>
