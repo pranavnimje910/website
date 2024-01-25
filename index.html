@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
@@ -34,8 +35,8 @@
         .header {
            
             width: 100%;
-            /* backdrop-filter: blur(50px); */
-           padding: 10px 20px;
+            backdrop-filter: blur(50px);
+            padding: 7px 20px;
             padding-right: 50px;
             display: flex;
             position: fixed;
@@ -44,8 +45,8 @@
             left: 0px;
             justify-content: space-between;
             align-items: center;
-            background-color: #68aba7;
-            border-bottom:1px solid #76777759;
+            /* background-color: #68aba7;
+            border-bottom:1px solid #76777759; */
             
         }
 
@@ -103,9 +104,7 @@
             height: 40px;
             font-size: 30px;
             background-color: transparent;
-            border: 1px solid  rgba(71, 31, 127, 0.32);
             color:  rgb(71, 31, 127);
-            box-shadow: 2px 1px 3px rgba(12, 12, 12, 0.54);
             border-radius: 5px;
             display: none;
         }
@@ -114,7 +113,7 @@
             color: #fff;
         }
         .box{
-            width: 800px;
+            width: 70%;
             height: fit-content;
             backdrop-filter: blur(5px);
             background-color: rgba(213, 209, 223, 0.128);
@@ -127,6 +126,7 @@
             border-color: rgba(139, 136, 146, 0.737);
             padding-bottom: 40px;
             padding-top: 10px;
+            margin-bottom: 2%;
         }
         #guide{
             backdrop-filter: blur(5px);
@@ -136,7 +136,7 @@
             margin-top: 20px;
             margin-bottom: 50px;
             padding: 30px 20px;
-            width: 700px;
+            width: 70%;
             height: fit-content;
             /* min-width: 800px;
             max-width: 800px; */
@@ -162,6 +162,7 @@
         #increase{
             margin: 20px;
             font-size: 20px;
+            padding-bottom: 20px;
             animation-delay: 1.5s;
         }
         #button{
@@ -190,18 +191,19 @@
             border-radius: 6px;
             margin: 7px;
         }
-        /* #com{
-            width: 100%;
-           
+        #com{
+            margin: auto;
+            width: 90%;
+           transition: 0.5s;
         }
         #com h2{
             text-align: center;
             padding-top: 45px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: rgb(54, 21, 100);
-        } */
+        }
 
-        .slider-container{
+        /* .slider-container{
             width: 90%;
             height: fit-content;
             padding: 15px;
@@ -219,7 +221,7 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         marquee{
-           /* background-color: antiquewhite; */
+           background-color: antiquewhite;
            margin-top: 15px;
            padding: 20px;
            border-radius: 15px;
@@ -232,11 +234,8 @@
             margin-right: 40px;          
         }
         marquee img:last-child{
-            height: 50px;
-        }
-        /* .logos{
-            width: 900px;
-
+            height: 50px; 
+        } */
         .logos{
             width: 90%;
             margin: auto;
@@ -250,8 +249,9 @@
         .logos-slider img{
             height: 30px;
             margin: 0 50px;
-        } */
-        /* .logos-slider{
+        }
+        .logos-slider{
+            white-space: nowrap;
             display: inline-block;
             animation: 30s slide infinite linear;
         }
@@ -266,22 +266,22 @@
             to {
                 transform: translateX(-100%);
             }
-        } */
-        /* #space{
+        }
+        #space{
             min-height: 40px;
             max-height: 40px;
-        } */
+        }
 
         #userguide{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(81, 37, 142);
             text-align: center;
             font-size: 30px;
-            animation-delay: 2s;
+            transition: 0.5s;
         }
         #intro{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            animation-delay: 2.5s;
+            transition: 0.5s;
         }
         #steps{
             background-color: rgba(255, 255, 255, 0.345);
@@ -289,7 +289,7 @@
             padding: 20px;
             text-align: left;
             font-size: 20px;
-            animation-delay: 3s;
+            transition: 0.5s;
         }
         #steps p{
             text-align: justify;
@@ -315,6 +315,7 @@
         }
         #guide{
             width: 90%;
+            transition: 0.3s;
             text-align: justify;
         }
         .menu{
@@ -322,12 +323,9 @@
         }
         nav{
             display: none;
-            background-color: #6DB5B2;
-            width: 250px;
-            height: 500px;
-            border: 1px solid rgba(153, 152, 152, 0.564);
-            box-shadow: -5px 5px 10px rgba(12, 12, 12, 0.54);
-            border-radius: 15px;
+            width: 200px;
+            height: 250px;
+            border-right: 4px solid rgb(81, 37, 142);
             position: absolute;
             top: 70px;
             right: 10px;
@@ -335,6 +333,7 @@
         .links-list{
             width: 100%;
             height: 100%;
+
             padding-top: 30px;
             flex-direction: column;
             justify-content: start;
@@ -343,17 +342,16 @@
         .links-list li{
             width: 80%;
             margin-inline: auto;
-            background-color: #79ACA4;
-           
+            background-color: rgb(71, 31, 127);
             padding: 10px 20px;
-            border-radius: 10px;
+            border-radius: 40px;
         }
         .links-list li:hover{
            background-color: #7f8e8b;
            color: #fff;
         }
         .links-list li a{
-            color: black;
+            color: rgb(255, 254, 254);
         }
         .show{
             display: block;
@@ -378,7 +376,7 @@
             font-weight: 800;
             padding: 10px 0px;
         }
-        }
+    }
 
     </style>
 </head>
@@ -409,7 +407,7 @@
 
     <!-- ----ImageSlider----- -->
 
-        <div class="slider-container">
+        <!-- <div class="slider-container">
             <h2>Some famous companies that shortlisted our resumes</h2>
            
                 <marquee behavior="" direction="">
@@ -441,11 +439,11 @@
                     <img src="https://companieslogo.com/img/orig/WIT_BIG-0de2dc21.png?t=1648406781" />
            
                 </marquee>
-        </div>
+        </div> -->
 
 
 
-    <!-- <div class="anim" id="com">
+    <div class="anim" id="com">
         <h2><b>Some famous companies that shortlisted our resumes</b></h2>
             <div class="logos">
                 <div class="logos-slider">
@@ -464,6 +462,20 @@
                         <img src="./Images/comtcs.png" />
 
                         <img src="./Images/cominfotrixs.PNG" />
+
+                        <img src="./Images/comcognizant.png" />
+                    
+                        <img src="./Images/comdeloitte.png" />
+                    
+                        <img src="./Images/comgoldmansachs.png" />
+                
+                        <img src="./Images/comJPmorgan.png" />
+                    
+                        <img src="./Images/commmt.svg" />
+                    
+                        <img src="./Images/compaytm.webp" />
+
+                        <img src="./Images/comwalmart.png" />
                 </div>
                 <div class="logos-slider">
                 
@@ -481,20 +493,34 @@
                         <img src="./Images/comtcs.png" />
 
                         <img src="./Images/cominfotrixs.PNG" />
+
+                        <img src="./Images/comcognizant.png" />
+                    
+                        <img src="./Images/comdeloitte.png" />
+                    
+                        <img src="./Images/comgoldmansachs.png" />
+                
+                        <img src="./Images/comJPmorgan.png" />
+                    
+                        <img src="./Images/commmt.svg" />
+                    
+                        <img src="./Images/compaytm.webp" />
+
+                        <img src="./Images/comwalmart.png" />
                 </div>
             </div>
     </div>
 
-    <div id="space"></div> -->
+    <div id="space"></div>
 
-    <div class="anim" id="guide">
-        <h2 class="anim" id="userguide"><b>User Guide</b></h2>
+    <div id="guide" data-aos="fade-up">
+        <h2 id="userguide" ><b>User Guide</b></h2>
         <br>
-        <h3 class="anim" id="intro">Web 05 is very easy and simple to used. It is designed in a such way that user can generate their favrouite resume by following just few steps.</h3>
+        <h3 id="intro">Web 05 is very easy and simple to used. It is designed in a such way that user can generate their favrouite resume by following just few steps.</h3>
         <br>
         <hr>
         <br>
-            <div class="anim" id="steps">
+            <div id="steps">
             <h3>Step 1:</h3>
             <p>Click on "GET STARTED" button and you will be directed to templates page.</p>
             <br>
@@ -520,6 +546,10 @@
        nav.classList.toggle("show");
        menu.classList.toggle("menu-color")
     })
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>
