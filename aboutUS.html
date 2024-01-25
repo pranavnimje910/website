@@ -1,321 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
-        body{
-            background-image: url("./Images/BG.jpg");
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-color: rgba(205,204,236,255);
-        }
-        .header {
-            z-index: 999;
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            backdrop-filter: blur(50px);
-            padding: 6.4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("./Images/BG.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: rgba(205, 204, 236, 255);
+      }
+      .header {
+        z-index: 999;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        backdrop-filter: blur(50px);
+        padding: 6.4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .logo img {
-            box-shadow: 5px 5px 2px rgba(70, 70, 70, 0.783);
-            margin-left: 15px;
-            border-style: solid;
-            border-color: white;
-            border-width: 1px;
-            border-radius: 6px;
-            max-width: 100%;
-            height: 41px;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-left: 10px;
-            margin-right: 50px;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: rgb(71, 31, 127);
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.5s;
-        }
-        nav a:hover{
-            font-size: 21px;
-        }
-        .container{
-            backdrop-filter: blur(5px);
-            background-color: rgba(213, 209, 223, 0.128);
-            margin: auto;
-            margin-bottom: 50px;
-            padding-bottom: 40px;
-            text-align: center;
-            font-family: sans-serif;
-            width: 70%;
-            border-style: solid;
-            border-width: 0.5px;
-            border-radius: 12px;
-            box-shadow: 10px 10px 5px rgba(57, 63, 65, 0.571);
-            border-color: rgba(139, 136, 146, 0.737);
-            margin-top: 60px;
-        }
-        .container h1{
-            margin: 15px;
-            padding-bottom: 15px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 50px;
-            color: rgb(60, 24, 110);
-            border-bottom-style: solid;
-            border-color: rgb(103, 103, 103);
-        }
-        .webdes{
-            font-size: 20px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 40px;
-            padding-bottom: 30px;
-            border-bottom-style: solid;
-            border-color: rgb(103, 103, 103);
-        }
-        .subtitle{
-            margin: 10px;
-            padding: 25px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 35px;
-            color: rgb(60, 24, 110);
-            border-bottom-style: solid;
-            border-color: rgb(103, 103, 103);
-        }
-        .harsh{
-            margin: 5px auto;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .pranav{
-            margin: 5px auto;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .muskan{
-            margin: 5px auto;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .sagar{
-            margin: 5px auto;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .shweta{
-            margin: 5px auto;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .yajnesh{
-            margin: 5px auto;
-            margin-bottom: 70px;
-            width: 85%;
-            display: flex;
-            align-items: center;
-            border-bottom-style: solid;
-            border-color:rgb(103, 103, 103);
-        }
-        .textleft{
-            text-align: left;
-            padding-left: 20px;
-        }
-        .team img{
-            border-style: inset;
-            border-width: 4px;
-            border-color: rgb(108, 177, 255);
-            border-radius: 15px;
-            margin: 15px;
-        }
-        .team p{
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 17px;
-            padding: 15px;
-            font-style: Bold;
-        }
-        .harshfeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .pranavfeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .muskanfeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .sagarfeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .shwetafeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .yajneshfeed{
-            padding: 15px;
-            border-radius: 10px;
-            text-align: left;
-            width: 85%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-        .feedback h3{
-            padding-left: 15px;
-        }
+      .logo img {
+        box-shadow: 5px 5px 2px rgba(70, 70, 70, 0.783);
+        margin-left: 15px;
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+        border-radius: 6px;
+        max-width: 100%;
+        height: 41px;
+      }
 
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-left: 10px;
+        margin-right: 50px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: rgb(71, 31, 127);
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.5s;
+      }
+      nav a:hover {
+        font-size: 21px;
+      }
+      .container {
+        backdrop-filter: blur(5px);
+        background-color: rgba(213, 209, 223, 0.128);
+        margin: auto;
+        margin-bottom: 50px;
+        padding-bottom: 40px;
+        text-align: center;
+        font-family: sans-serif;
+        width: 70%;
+        border-style: solid;
+        border-width: 0.5px;
+        border-radius: 12px;
+        box-shadow: 10px 10px 5px rgba(57, 63, 65, 0.571);
+        border-color: rgba(139, 136, 146, 0.737);
+        margin-top: 80px;
+      }
+      .container h1 {
+        margin: 15px;
+        padding-bottom: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 50px;
+        color: rgb(60, 24, 110);
+        border-bottom-style: solid;
+        border-color: rgb(103, 103, 103);
+      }
+      .webdes {
+        font-size: 20px;
+        text-align: justify;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 40px;
+        padding-bottom: 30px;
+        border-bottom-style: solid;
+        border-color: rgb(103, 103, 103);
+      }
+      .subtitle {
+        margin: 10px;
+        padding: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 35px;
+        color: rgb(60, 24, 110);
+        border-bottom-style: solid;
+        border-color: rgb(103, 103, 103);
+      }
+      .info-details {
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        border-bottom-style: solid;
+        border-color: rgb(103, 103, 103);
+      }
+
+      .textleft {
+        text-align: left;
+        padding-left: 20px;
+      }
+      .textleft p {
+        text-align: justify;
+      }
+      .team img {
+        border-style: inset;
+        border-width: 4px;
+        border-color: rgb(108, 177, 255);
+        border-radius: 15px;
+        margin: 15px;
+      }
+      .team p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+        padding: 15px;
+        font-style: Bold;
+      }
+      .allFeed {
+        padding: 15px;
+        border-radius: 10px;
+        text-align: left;
+        width: 85%;
+        margin: 20px auto;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+      .allFeed p {
+        text-align: justify;
+      }
+      .feedback h3 {
+        padding-left: 15px;
+      }
+      @media screen and (max-width: 700px) {
+        .container {
+          width: 80%;
+        }
+        .info-details {
+          flex-direction: column;
+        }
+        .textleft h2 {
+          text-align: center;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        .container {
+          width: 85%;
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .container {
+          width: 95%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="logo">
-            <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="templates.html">Templates</a></li>
-                <li><a href="aboutUS.html">About Us</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="./Images/logo.PNG" height="41px" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="templates.html">Templates</a></li>
+          <li><a href="aboutUS.html">About Us</a></li>
+        </ul>
+      </nav>
     </div>
     <div class="container">
-        <h1>About Us</h1>
-        <p class="webdes"><b>"WEB 05 is a dynamic and user-friendly resume template website offering a diverse range of professionally crafted templates designed to elevate job seekers' profiles. Our platform provides a seamless experience, empowering users to create polished resumes that stand out in today's competitive job market. With customizable layouts, modern designs, and industry-specific options, our templates cater to various professions, ensuring every applicant can present their skills and experiences with impact. Elevate your career journey with our intuitive and aesthetically pleasing resume templates."</b></p>
+      <h1>About Us</h1>
+      <p class="webdes">
+        <b
+          >"WEB 05 is a dynamic and user-friendly resume template website
+          offering a diverse range of professionally crafted templates designed
+          to elevate job seekers' profiles. Our platform provides a seamless
+          experience, empowering users to create polished resumes that stand out
+          in today's competitive job market. With customizable layouts, modern
+          designs, and industry-specific options, our templates cater to various
+          professions, ensuring every applicant can present their skills and
+          experiences with impact. Elevate your career journey with our
+          intuitive and aesthetically pleasing resume templates."</b
+        >
+      </p>
     </div>
 
     <div class="container">
-        <h2 class="subtitle">Our Expert Team</h2>
-        <div class="team">
-        <div class="harsh">
-            <img src="./Images/harsh.JPEG" width="130px">
-            <div class="textleft">
+      <h2 class="subtitle">Our Expert Team</h2>
+      <div class="team">
+        <div class="info-details">
+          <img src="./Images/harsh.JPEG" width="130px" />
+          <div class="textleft info">
             <h2>Harsh Rudrawar</h2>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python. Solid understanding of computer logical programming and algorithms. Eager to contribute technical expertise, a quick learner with a passion for innovation, and an effective collaborator in team environments.</p>
-            </div>
+            <p>
+              Computer Engineering student with strong hardware and software
+              development skills, skillful in C++, MySQL, and Python. Solid
+              understanding of computer logical programming and algorithms.
+              Eager to contribute technical expertise, a quick learner with a
+              passion for innovation, and an effective collaborator in team
+              environments.
+            </p>
+          </div>
         </div>
-        <div class="pranav">
-            <img src="./Images/pranav.JPEG" width="130px">
-            <div class="textleft">
-                <h2>Pranav Nimje</h2>
-                <p>My name is Pranav Nimje, Third-Year student pursuing my BE in Computer Engineering. Solid understanding of computer logical programming and algorithms. A quick learner with a passion for innovation, and an effective collaborator in team environments. Currently working as Full-Stack Web developer intern at Infotrixs. My role in resume builder website is to design Website User Interface, making it responsive and creating few templates.</p>
-                </div>
+        <div class="info-details">
+          <img src="./Images/pranav.JPEG" width="130px" />
+          <div class="textleft">
+            <h2>Pranav Nimje</h2>
+            <p>
+              My name is Pranav Nimje, Third-Year student pursuing my BE in
+              Computer Engineering. Solid understanding of computer logical
+              programming and algorithms. A quick learner with a passion for
+              innovation, and an effective collaborator in team environments.
+              Currently working as Full-Stack Web developer intern at Infotrixs.
+              My role in resume builder website is to design Website User
+              Interface, making it responsive and creating few templates.
+            </p>
+          </div>
         </div>
-        <div class="muskan">
-            <img src="./Images/muskan.JPEG" width="130px">
-            <div class="textleft">
-                <h2>Muskan Jarwal</h2>
-                <p>I am Muskan Jarwal, currently a second-year student pursuing a B.Tech in Computer Science with a specialization in Artificial Intelligence at the Indira Gandhi Delhi Technical University for Women (IGDTUW) in New Delhi. Alongside my academic endeavors, I am gaining experience as an front-end developer intern at Infortnix, where I am actively involved in contributing to project.</p>
-                </div>
+        <div class="info-details">
+          <img src="./Images/muskan.JPEG" width="130px" />
+          <div class="textleft">
+            <h2>Muskan Jarwal</h2>
+            <p>
+              I am Muskan Jarwal, currently a second-year student pursuing a
+              B.Tech in Computer Science with a specialization in Artificial
+              Intelligence at the Indira Gandhi Delhi Technical University for
+              Women (IGDTUW) in New Delhi. Alongside my academic endeavors, I am
+              gaining experience as an front-end developer intern at Infortnix,
+              where I am actively involved in contributing to project.
+            </p>
+          </div>
         </div>
-        <div class="sagar">
-            <img src="./Images/sagar.JPEG" width="130px">
-            <div class="textleft">
-                <h2>Sagar Parise</h2>
-                <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python. Solid understanding of computer logical programming and algorithms. Eager to contribute technical expertise, a quick learner with a passion for innovation, and an effective collaborator in team environments.</p>
-                </div>
+        <div class="info-details">
+          <img src="./Images/sagar.JPEG" width="130px" />
+          <div class="textleft">
+            <h2>Sagar Parise</h2>
+            <p>
+              My name is Sagar Parise and i have completed my B.E in Civil
+              Engg.But i was passionate about coding so i am currently pursing
+              MERN Stack Web Development Course at Acciojob.During my acadamic journey
+              i have gained a lot of experience in Web Development.Now i am
+              working as Front-end Developer intern at Infotrix for Resume
+              Builder Project where i have implemented whole logic behind this
+               project and made it dynamic and responsive for all screen.
+            </p>
+          </div>
         </div>
-        <div class="shweta">
-            <img src="./Images/shweta.JPEG" width="130px">
-            <div class="textleft">
-                <h2>Shweta Gidveer</h2>
-                <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python. Solid understanding of computer logical programming and algorithms. Eager to contribute technical expertise, a quick learner with a passion for innovation, and an effective collaborator in team environments.</p>
-                </div>
+        <div class="info-details">
+          <img src="./Images/shweta.JPEG" width="130px" />
+          <div class="textleft">
+            <h2>Shweta Gidveer</h2>
+            <p>
+              Computer Engineering student with strong hardware and software
+              development skills, skillful in C++, MySQL, and Python. Solid
+              understanding of computer logical programming and algorithms.
+              Eager to contribute technical expertise, a quick learner with a
+              passion for innovation, and an effective collaborator in team
+              environments.
+            </p>
+          </div>
         </div>
-        <div class="yajnesh">
-            <img src="./Images/yajnesh.jpg" width="130px">
-            <div class="textleft">
-                <h2>Yajnesh</h2>
-                <p>My name is Yajnesh, final year student pursuing Masters in Computer Applications. Good in logical thinking, learning new things and an effective collaborator in team environments. Currently working as Full-Stack Web developer intern at Infotrixs. My role in resume builder website is to design a template and make the website responsive.</p>
-                </div>
+        <div class="info-details">
+          <img src="./Images/yajnesh.jpg" width="130px" />
+          <div class="textleft">
+            <h2>Yajnesh</h2>
+            <p>
+              My name is Yajnesh, final year student pursuing Masters in
+              Computer Applications. Good in logical thinking, learning new
+              things and an effective collaborator in team environments.
+              Currently working as Full-Stack Web developer intern at Infotrixs.
+              My role in resume builder website is to design a template and make
+              the website responsive.
+            </p>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
 
     <div class="container">
-        <h2 class="subtitle">Feedbacks</h2>
-        <div class="feedback">
-        <div class="harshfeed">
-            <h3>Name ⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+      <h2 class="subtitle">Feedbacks</h2>
+      <div class="feedback">
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        <div class="pranavfeed">
-            <h3>Name ⭐⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        <div class="muskanfeed">
-            <h3>Name ⭐⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        <div class="sagarfeed">
-            <h3>Name ⭐⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        <div class="shwetafeed">
-            <h3>Name ⭐⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        <div class="yajneshfeed">
-            <h3>Name ⭐⭐⭐⭐⭐</h3>
-            <p>Computer Engineering student with strong hardware and software development skills, skillful in C++, MySQL, and Python.</p>
+        <div class="allFeed">
+          <h3>Name ⭐⭐⭐⭐⭐</h3>
+          <p>
+            Computer Engineering student with strong hardware and software
+            development skills, skillful in C++, MySQL, and Python.
+          </p>
         </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
