@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>About Us</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
       * {
         padding: 0px;
@@ -12,24 +15,27 @@
         box-sizing: border-box;
       }
       body {
+      
         background-image: url("./Images/BG.jpg");
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-color: rgba(205, 204, 236, 255);
+        background-color: rgba(106,118,118,255); 
+        
       }
+
       header {
-        z-index: 999;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        backdrop-filter: blur(50px);
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgb(99,171,168);
-      }
+     
+      position: fixed;
+      top: 0px;
+      z-index: 10;
+      width: 100%;   
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(99,171,168);
+    }
 
       .logo img {
         box-shadow: 5px 5px 2px rgba(70, 70, 70, 0.783);
@@ -76,16 +82,21 @@
             background-color: #8148fd;
             color: #fff;
         }
+        .root-container{
+          width: 100vw;
+          height: fit-content;
+         
+        }
 
       .container {
         backdrop-filter: blur(5px);
-        background-color: rgba(213, 209, 223, 0.128);
-        margin: auto;
+        background-color: rgba(213, 209, 223, 0.128);    
+        width: 80%;  
+        margin-inline: auto;
         margin-bottom: 50px;
         padding-bottom: 40px;
         text-align: center;
         font-family: sans-serif;
-        width: 70%;
         border-style: solid;
         border-width: 0.5px;
         border-radius: 12px;
@@ -224,6 +235,7 @@
       @media screen and (max-width: 550px) {
         .container {
           width: 85%;
+         
         }
         .container h1{
           font-size: 35px;
@@ -242,8 +254,8 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-          <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
+      <div class="logo">        
+        <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
       </div>
       <nav>
           <ul class="links-list">
@@ -252,12 +264,19 @@
               <li><a href="aboutUS.html">About Us</a></li>
           </ul>
       </nav>
+
       <button class='bx bx-menu menu '></button>
   </header>
-    <div class="container">
+   
+    <div class="root-container">
+      <div class="container" data-aos="fade-up" data-aos-duration="500">
+        <div data-aos="fade-up" data-aos-duration="500">
       <h1>About Us</h1>
-      <p class="webdes">
-        "WEB 05 is a dynamic and user-friendly resume template website
+    </div>
+    <div>
+      <p class="webdes" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+        <b>
+          "WEB 05 is a dynamic and user-friendly resume template website
           offering a diverse range of professionally crafted templates designed
           to elevate job seekers' profiles. Our platform provides a seamless
           experience, empowering users to create polished resumes that stand out
@@ -269,11 +288,14 @@
         >
       </p>
     </div>
+    </div>
 
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+        <div data-aos="fade-up" data-aos-duration="500">
       <h2 class="subtitle">Our Expert Team</h2>
+    </div>
       <div class="team">
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/harsh.JPEG" width="130px" />
           <div class="textleft info">
             <h2>Harsh Rudrawar</h2>
@@ -287,7 +309,7 @@
             </p>
           </div>
         </div>
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/pranav.JPEG" width="130px" />
           <div class="textleft">
             <h2>Pranav Nimje</h2>
@@ -302,7 +324,7 @@
             </p>
           </div>
         </div>
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/muskan.JPEG" width="130px" />
           <div class="textleft">
             <h2>Muskan Jarwal</h2>
@@ -316,7 +338,7 @@
             </p>
           </div>
         </div>
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/sagar.JPEG" width="130px" />
           <div class="textleft">
             <h2>Sagar Parise</h2>
@@ -331,21 +353,20 @@
             </p>
           </div>
         </div>
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/shweta.JPEG" width="130px" />
           <div class="textleft">
             <h2>Shweta Gidveer</h2>
             <p>
-              Computer Engineering student with strong hardware and software
-              development skills, skillful in C++, MySQL, and Python. Solid
-              understanding of computer logical programming and algorithms.
-              Eager to contribute technical expertise, a quick learner with a
-              passion for innovation, and an effective collaborator in team
-              environments.
+                I am Shweta Gidveer. I completed my MCA and currently doing 
+                Full Stack Developer(.Net) Course Certification in Pune. 
+                During this Course I have learned how to do Back-End work. Now I am 
+                learning Front-End work in the course as well as Infotrixs Internship.
+                I'm created Template for Resume Builder and contributed in Coding
             </p>
           </div>
         </div>
-        <div class="info-details">
+        <div class="info-details" data-aos="fade-left" data-aos-duration="500">
           <img src="./Images/yajnesh.jpg" width="130px" />
           <div class="textleft">
             <h2>Yajnesh</h2>
@@ -362,45 +383,47 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+        <div data-aos="fade-up" data-aos-duration="500">
       <h2 class="subtitle">Feedbacks</h2>
+    </div>
       <div class="feedback">
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-left" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
             development skills, skillful in C++, MySQL, and Python.
           </p>
         </div>
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-right" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
             development skills, skillful in C++, MySQL, and Python.
           </p>
         </div>
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-left" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
             development skills, skillful in C++, MySQL, and Python.
           </p>
         </div>
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-right" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
             development skills, skillful in C++, MySQL, and Python.
           </p>
         </div>
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-left" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
             development skills, skillful in C++, MySQL, and Python.
           </p>
         </div>
-        <div class="allFeed">
+        <div class="allFeed" data-aos="fade-right" data-aos-duration="500">
           <h3>Name ⭐⭐⭐⭐⭐</h3>
           <p>
             Computer Engineering student with strong hardware and software
@@ -408,6 +431,8 @@
           </p>
         </div>
       </div>
+    </div>
+
     </div>
 
     <script>
@@ -419,6 +444,12 @@
          menu.classList.toggle("menu-color")
       })
       </script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
   </body>
 </html>
