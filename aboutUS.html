@@ -64,10 +64,25 @@
         font-weight: bold;
         font-size: 20px;
         transition: 0.5s;
+        position: relative;
       }
-      nav a:hover {
-        font-size: 21px;
-      }
+      .links-list li a::after{
+        content: '';
+        width: 0px;
+        height: 3px;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+        transition: width 0.5s linear;
+    }
+    .links-list li a:hover::after{
+        width: 100%;
+        background-color: rgb(71, 31, 127);
+        border-radius: 5px;
+    }
+      /* nav a:hover {
+        font-size: 21px; 
+      } */
 
       .menu{
             width: 40px;
@@ -83,7 +98,8 @@
             color: #fff;
         }
         .root-container{
-          width: 100vw;
+          width: 100%;
+          overflow: hidden;
           height: fit-content;
          
         }
@@ -278,14 +294,13 @@
         <b>
           "WEB 05 is a dynamic and user-friendly resume template website
           offering a diverse range of professionally crafted templates designed
-          to elevate job seekers' profiles. Our platform provides a seamless
+          to elevate job seeker's profiles. Our platform provides a seamless
           experience, empowering users to create polished resumes that stand out
           in today's competitive job market. With customizable layouts, modern
           designs, and industry-specific options, our templates cater to various
           professions, ensuring every applicant can present their skills and
           experiences with impact. Elevate your career journey with our
           intuitive and aesthetically pleasing resume templates."
-        >
       </p>
     </div>
     </div>
@@ -333,7 +348,7 @@
               B.Tech in Computer Science with a specialization in Artificial
               Intelligence at the Indira Gandhi Delhi Technical University for
               Women (IGDTUW) in New Delhi. Alongside my academic endeavors, I am
-              gaining experience as an front-end developer intern at Infortnix,
+              gaining experience as an front-end developer intern at Infotrixs,
               where I am actively involved in contributing to project.
             </p>
           </div>
@@ -343,13 +358,13 @@
           <div class="textleft">
             <h2>Sagar Parise</h2>
             <p>
-              My name is Sagar Parise and i have completed my B.E in Civil
-              Engg.But i was passionate about coding so i am currently pursing
-              MERN Stack Web Development Course at Acciojob.During my acadamic journey
-              i have gained a lot of experience in Web Development.Now i am
-              working as Front-end Developer intern at Infotrix for Resume
-              Builder Project where i have implemented whole logic behind this
-               project and made it dynamic and responsive for all screen.
+              My name is Sagar Parise and I have completed my B.E in Civil
+              Engg. But I was passionate about coding, so I am currently pursuing
+              MERN Stack Web Development Course at Acciojob. During my academic journey
+              I have gained a lot of experience in Web Development. Now I am
+              working as Front-end Developer intern at Infotrixs for Resume
+              Builder Project, where I have implemented whole logic behind this
+              project and made it dynamic and responsive for all screen.
             </p>
           </div>
         </div>
@@ -362,7 +377,7 @@
                 Full Stack Developer(.Net) Course Certification in Pune. 
                 During this Course I have learned how to do Back-End work. Now I am 
                 learning Front-End work in the course as well as Infotrixs Internship.
-                I'm created Template for Resume Builder and contributed in Coding
+                I'm created Template for Resume Builder and contributed in Coding.
             </p>
           </div>
         </div>
