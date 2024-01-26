@@ -20,6 +20,14 @@ let clgList = document.querySelector(".clg-details-container");
 let achiveList = document.querySelector(".achievement-list")
 let profileImage = document.getElementById('profileImage');
 
+const menu = document.querySelector(".menu");
+const nav =document.querySelector("nav");
+menu.addEventListener("click", ()=>{
+   
+   nav.classList.toggle("show");
+   menu.classList.toggle("menu-color")
+})
+
 function displayImage(input) {
  
   let preview = document.querySelector('.profile-container img');
@@ -197,3 +205,4 @@ function downloadCV() {
   };
  html2pdf().from(resume).set(opt).save();
 }
+

@@ -24,48 +24,7 @@
       background-attachment: fixed;
       background-size: cover;
     }
-    header {
-      position: fixed;
-      top: 0px;
-      width: 100%;
-      padding: 6.4px;
-      display: flex;
-      background-color: rgba(99,171,168,255);
-      z-index: 100;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-  .logo img {
-      box-shadow: 5px 5px 2px rgba(70, 70, 70, 0.783);
-      margin-left: 15px;
-      border-style: solid;
-      border-color: white;
-      border-width: 1px;
-      border-radius: 6px;
-      max-width: 100%;
-      height: 41px;
-  }
-  
-  nav ul {
-      list-style: none;
-      display: flex;
-  }
-  
-  nav ul li {
-      margin-right: 50px;
-  }
-  
-  nav a {
-      text-decoration: none;
-      color: rgb(71, 31, 127);
-      font-weight: bold;
-      font-size: 20px;
-      transition: 0.5s;
-  }
-  nav a:hover{
-      font-size: 21px;
-  }
+   
     .container {
       padding-top: 47px;
       width: 100%;
@@ -496,12 +455,13 @@
         <a href="index.html"><img src="./Images/logo.PNG" height="41px"></a>
     </div>
     <nav>
-        <ul>
+        <ul class="links-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="templates.html">Templates</a></li>
             <li><a href="aboutUS.html">About Us</a></li>
         </ul>
     </nav>
+    <button class='bx bx-menu menu '></button>
 </header>
   <div class="container">
     <!-- left-side -->
