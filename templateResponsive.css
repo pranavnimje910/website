@@ -42,10 +42,25 @@ nav a {
   font-weight: bold;
   font-size: 20px;
   transition: 0.5s;
+  position: relative;
 }
-nav a:hover {
+.links-list li a::after{
+  content: '';
+  width: 0px;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+  transition: width 0.5s linear;
+}
+.links-list li a:hover::after{
+  width: 100%;
+  background-color: rgb(71, 31, 127);
+  border-radius: 5px;
+}
+/* nav a:hover {
   font-size: 21px;
-}
+} */
 
 .menu{
       width: 40px;
